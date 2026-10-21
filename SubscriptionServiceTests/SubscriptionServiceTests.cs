@@ -114,7 +114,7 @@ namespace SubscriptionServiceTests
         /// Перевіряє за допомогою It.IsAny<Member>(), що метод _repo.Update() викликається з будь-яким екземпляром типу Member.
         /// </summary>
         [Fact]
-        public void DeactivateExpiredMembers_CallsUpdateWithAnyMember()
+        public void DeactivateExpiredMembers_HasExpiredMembers_CallsUpdateWithAnyMember()
         {
             var expiredMember = new Member
             {

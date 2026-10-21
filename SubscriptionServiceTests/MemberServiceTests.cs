@@ -20,7 +20,7 @@ namespace SubscriptionServiceTests
         /// Перевіряє, що метод GetMember повертає null, якщо користувача з вказаним ID не існує в базі даних.
         /// </summary>
         [Fact]
-        public void GetMember_ReturnsNull_WhenMemberDoesNotExist()
+        public void GetMember_WhenMemberDoesNotExist_ReturnsNull()
         {
             _repo.Setup(r => r.GetById(It.IsAny<int>())).Returns((Member)null);
             var service = new MemberService(_repo.Object);
